@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "484972613953",
+    "project_id": "dailies-695c1",
+    "storage_bucket": "dailies-695c1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484972613953:android:095506eb5611d963c0d1c0",
+        "android_client_info": {
+          "package_name": "com.example.dailies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_5k93TcN-GO9vQlHxKsYwyQjzGoSAiwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

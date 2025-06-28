@@ -1,0 +1,57 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "com.google.gms.google-services" // Correctly apply the plugin
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.dailies"
+    compileSdk = 34 // Explicitly set the compileSdkVersion
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    defaultConfig {
+        applicationId = "com.example.dailies"
+        minSdk = 21 // Explicitly set the minSdkVersion
+        targetSdk = 34 // Explicitly set the targetSdkVersion
+        versionCode = 1 // Set your version code
+        versionName = "1.0" // Set your version name
+    }
+
+    buildTypes {
+        release {
+            // TODO: Replace with your release signing config
+            signingConfig = signingConfigs.debug
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Import the Firebase BoM (Bill of Materials)
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+
+    // Add Firebase Analytics (or other Firebase products)
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Add other Firebase dependencies if needed
+    // https://firebase.google.com/docs/android/setup#available-libraries
+}
